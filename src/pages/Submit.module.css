@@ -1,0 +1,87 @@
+.page { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; }
+
+.header { margin-bottom: 36px; }
+.title { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+.sub { font-size: 15px; color: var(--text-2); }
+
+.form { display: flex; flex-direction: column; gap: 0; }
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-3);
+  margin-bottom: 16px;
+}
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--text-2); }
+.field input, .field select, .field textarea {
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-md);
+  background: var(--bg);
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--ice-400);
+  box-shadow: 0 0 0 3px rgba(55,138,221,0.1);
+}
+
+.btnSubmit {
+  align-self: flex-start;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--text);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+  transition: opacity 0.15s;
+}
+.btnSubmit:hover { opacity: 0.85; }
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px;
+  gap: 14px;
+  animation: fadeUp 0.4s ease both;
+}
+.successIcon { margin-bottom: 8px; }
+.success h2 { font-size: 30px; font-weight: 800; }
+.success p { font-size: 15px; color: var(--text-2); }
+.btnAgain {
+  margin-top: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-md);
+  background: var(--surface);
+  font-size: 14px;
+  color: var(--text-2);
+}
+.btnAgain:hover { color: var(--text); border-color: var(--border-md); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ice-50: #E6F1FB;
+  --ice-400: #378ADD;
+  --ice-600: #185FA5;
+  --ice-800: #0C447C;
+  --steel-50: #F1EFE8;
+  --steel-200: #B4B2A9;
+  --steel-400: #888780;
+  --steel-600: #5F5E5A;
+  --amber-50: #FAEEDA;
+  --amber-400: #EF9F27;
+  --amber-800: #633806;
+  --green-50: #EAF3DE;
+  --green-600: #3B6D11;
+  --red-50: #FCEBEB;
+  --red-600: #A32D2D;
+  --bg: #FAFAF8;
+  --surface: #FFFFFF;
+  --surface-2: #F4F2EC;
+  --border: rgba(0,0,0,0.08);
+  --border-md: rgba(0,0,0,0.14);
+  --text: #1A1A18;
+  --text-2: #5F5E5A;
+  --text-3: #999890;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.10);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body { min-height: 100vh; -webkit-font-smoothing: antialiased; }
+#root { min-height: 100vh; }
+h1,h2,h3,h4 { font-family: 'Syne', sans-serif; line-height: 1.1; letter-spacing: -0.03em; }
+button { font-family: 'DM Sans', sans-serif; cursor: pointer; }
+input,select,textarea { font-family: 'DM Sans', sans-serif; }
+a { text-decoration: none; color: inherit; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

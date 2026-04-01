@@ -1,0 +1,7 @@
+.stars { display: inline-flex; gap: 1px; }
+.sm span { font-size: 13px; }
+.md span { font-size: 16px; }
+.lg span { font-size: 20px; }
+.filled { color: #EF9F27; }
+.half { color: #EF9F27; opacity: 0.5; }
+.empty { color: #D3D1C7; }

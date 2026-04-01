@@ -1,0 +1,192 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: fadeIn 0.15s ease;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius-xl, 24px);
+  border: 1px solid var(--border);
+  padding: 32px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  animation: slideUp 0.2s ease;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--surface-2);
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.close:hover { background: var(--border); color: var(--text); }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.brandIcon {
+  width: 28px;
+  height: 28px;
+  background: var(--ice-400);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+}
+.brandName {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.tabs {
+  display: flex;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  margin-bottom: 24px;
+}
+.tab {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tabActive {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--text-2); }
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-md);
+  background: var(--bg, #FAFAF8);
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field input:focus {
+  border-color: var(--ice-400);
+  box-shadow: 0 0 0 3px rgba(55,138,221,0.12);
+}
+
+.pwWrap { position: relative; }
+.pwWrap input { padding-right: 40px; }
+.eyeBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-3);
+  display: flex;
+  cursor: pointer;
+  padding: 4px;
+}
+.eyeBtn:hover { color: var(--text-2); }
+
+.error {
+  background: var(--red-50, #FCEBEB);
+  color: var(--red-600, #A32D2D);
+  border: 1px solid rgba(163,45,45,0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--text);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 4px;
+}
+.submitBtn:hover:not(:disabled) { opacity: 0.85; }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.spin { animation: spin 0.8s linear infinite; }
+
+.switch {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-2);
+  margin-top: 20px;
+}
+.switch button {
+  background: none;
+  border: none;
+  color: var(--ice-600);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+.switch button:hover { text-decoration: underline; }
+
+.demo {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 12px;
+}
+.demo code {
+  background: var(--surface-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes spin { to { transform: rotate(360deg); } }
